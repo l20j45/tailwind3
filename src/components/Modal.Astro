@@ -1,0 +1,15 @@
+---
+const { boot, onClose } = Astro.props;
+---
+
+<div id="modal-detalles" class="modal">
+  <div id="modal-content">
+    <h3>{boot.Modelo}</h3>
+    <p>{boot.Descripcion_General}</p>
+    <ul>
+      {boot.Beneficios.map((feature:any) => <li>{feature}</li>)}
+    </ul>
+    <button onclick={onClose}>Cerrar</button>
+  </div>
+</div>
+``

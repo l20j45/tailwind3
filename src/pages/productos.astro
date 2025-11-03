@@ -1,0 +1,162 @@
+---
+import "../styles/tailwind.css";
+import BootCard from "../components/BootCard.astro";
+import Modal from "../components/Modal.astro";
+import { bootsData } from "../data/bootsData.js";
+import BootsList from "../components/BootsList.svelte";
+
+let showAllProducts = false;
+let selectedBoot = null;
+let filteredBoots = bootsData.slice(0, 5); // inicial
+
+function openModal(boot: any) {
+  selectedBoot = boot;
+}
+
+function closeModal() {
+  selectedBoot = null;
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Botas</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900|Bebas+Neue:400,500,600,700,800,900&subset=latin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="shuffle-for-tailwind.png"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+      defer></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div class="">
+      <div class="min-h-screen py-12 px-4">
+        <div class="flex flex-col max-w-7xl mx-auto">
+          <!-- Header Section -->
+          <div class="text-center mb-12">
+            <h3 class="mt-8 mb-4 text-7xl text-black tracking-tighter">
+              Descubre GDL SR Boots
+            </h3>
+            <p class="mb-8 text-black text-opacity-60 max-w-2xl mx-auto">
+              Protección y comodidad para profesionales. Descubre nuestra
+              selección de calzado de seguridad certificado para todas las
+              industrias.
+            </p>
+          </div>
+          <!-- Search and Filter Section -->
+
+            <BootsList client:load />
+
+          <div
+            class="mt-20 max-w-2xl mx-auto text-center border border-gray-900 rounded-3xl p-12"
+          >
+            <h4 class="mb-4 text-4xl text-black tracking-tighter">
+              Recibe nuestras ofertas
+            </h4>
+            <p class="mb-8 text-black text-opacity-60">
+              Suscríbete a nuestro boletín y recibe descuentos exclusivos en
+              calzado de seguridad.
+            </p>
+            <div
+              class="relative max-w-md mx-auto border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl"
+            >
+              <input
+                class="custom-input-text-4 relative z-10 px-8 pr-28 pt-8 pb-3 text-gray-300 w-full placeholder-gray-300 outline-none bg-transparent"
+                type="text"
+                required=""
+              />
+              <label
+                class="absolute left-8 top-1/2 transform -translate-y-1/2 text-gray-300 transition duration-300"
+                >Tu correo electrónico</label
+              >
+              <a
+                class="absolute z-20 right-0 top-0 flex items-center justify-center px-8 h-full bg-green-400 hover:bg-green-500 rounded-3xl transition duration-300"
+                href="#"
+              >
+                <svg
+                  width="10"
+                  height="17"
+                  viewBox="0 0 10 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.79687 15.4299L7.50188 9.72495C8.17563 9.0512 8.17563 7.9487 7.50188 7.27495L1.79688 1.56995"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Detalles -->
+    <div id="modal-detalles" class="hidden fixed inset-0 z-50 overflow-y-auto">
+      <!-- Overlay -->
+      <div
+        class="fixed inset-0 bg-black bg-opacity-25 transition-opacity"
+        id="modal-overlay"
+      >
+      </div>
+
+      <!-- Modal Content -->
+      <div class="flex min-h-screen items-center justify-center p-4 bg-white">
+        <div
+          class="relative bg-white rounded-3xl max-w-4xl w-full mx-auto shadow-2xl transform transition-all"
+        >
+          <!-- Close Button -->
+          <button
+            id="close-modal"
+            class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Modal Body -->
+          <div class="p-8 bg-green-400" id="modal-content">
+            <!-- Content will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
