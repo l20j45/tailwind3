@@ -115,7 +115,9 @@
               <div class="relative overflow-hidden bg-gray-900 bg-opacity-30">
                 <img class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500" src="images/Mod-2048-musgo.jpg" alt="Bota de Seguridad Industrial">
                 <div class="absolute top-4 right-4">
+                    {#if boot?.new == "yes"}
                   <span class="px-3 py-1.5 text-sm font-medium text-center text-green-400 uppercase border border-green-400 rounded-full bg-black bg-opacity-50">Nuevo</span>
+                  {/if}
                 </div>
               </div>
               <div class="p-8">
@@ -141,7 +143,7 @@
                 </div>
                 <div class="flex items-center justify-between mb-4">
 
-                  <a class="inline-block px-10 py-10 text-black font-medium rounded-full bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 transition duration-300" href="#">Contactar</a>
+                  <a class="inline-block px-10 py-2 text-black font-medium rounded-full bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 transition duration-300" href="https://wa.me/message/YO45MCDXZ6ILG1">Contactar</a>
                 </div>
                 <a class="group inline-flex items-center" href="#">
                   <span class="mr-3.5 text-black font-medium underline">Ver detalles</span>

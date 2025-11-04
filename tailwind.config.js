@@ -1047,11 +1047,8 @@ module.exports = {
     },
   },
   content: [
-    './src/pug/*.pug',
-    './src/html/*.html',
-    './src/pages/*.{js,ts,jsx,tsx,mdx,astro}',
-    './src/components/*/*.{js,ts,jsx,tsx,mdx,astro}',
-    './src/layouts/*/*.{js,ts,jsx,tsx,mdx,astro}',
+    './src/**/*.{svelte,astro,html,js,jsx,md,mdx,ts,tsx}',
+    './public/**/*.{html}',
   ],
   plugins: [],
 };

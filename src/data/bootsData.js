@@ -16,7 +16,8 @@
         anti_absorbencia: "Suela anti_absorbencia a los impactos",
         resistencia_electrica: "Aislamiento Eléctrico Maximo: 18 KV",
         estandar_de_calidad: "NOM-113-STPS-2009 ",
-        tallas_disponibles: ": 23 A 29.5 CM"
+        tallas_disponibles: ": 23 A 29.5 CM",
+         new:"yes"
     },
     {
         Modelo: "3058",
