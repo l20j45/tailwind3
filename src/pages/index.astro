@@ -1,720 +1,308 @@
 ---
-import "../styles/tailwind.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>SR-Boots-GDL — Homepage</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900|Bebas+Neue:400,500,600,700,800,900&subset=latin"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="shuffle-for-tailwind.png"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
-      defer></script>
-  </head>
-  <body class="antialiased bg-body text-body font-body">
-    <section x-data="{ mobileNavOpen: false }" class="overflow-hidden flex content-between fixed  top-0 left-0 right-0 z-50 bg-body shadow-md ">
-      <div class="container mx-auto">
-        <div class="flex items-center justify-between me-16">
-          <div class="w-auto p-2">
-            <div class="flex flex-wrap items-center">
-              <div class="w-auto">
-                <a class="relative z-10 inline-block" href="index.html">
-                  <img
-                    src="/images/GDL-BOOTS-SR-TRANSPARENTE-png-1761155626864.webp"
-                    alt="SR Boots GDL"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="w-auto p-2">
-            <div class="flex flex-wrap items-center">
-              <div class="w-auto hidden lg:block">
-                <ul class="flex items-center mr-12">
-                  <li
-                    class="mr-12 text-black font-medium hover:text-opacity-90 tracking-tighter"
-                  >
-                    <a href="/index.html">Inicio</a>
-                  </li>
-                  <li
-                    class="mr-12 text-black font-medium hover:text-opacity-90 tracking-tighter"
-                  >
-                    <a href="/productos">Productos</a>
-                  </li>
-                  <li
-                    class="mr-12 text-black font-medium hover:text-opacity-90 tracking-tighter"
-                  >
-                    <a href="/nosotros">Nosotros</a>
-                  </li>
-                  <li
-                    class="text-black font-medium hover:text-opacity-90 tracking-tighter"
-                  >
-                    <a href="/contacto">Contacto</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="w-auto hidden lg:block">
-                <div class="inline-block">
-                  <a
-                    class="inline-block px-8 py-4 text-black hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300"
-                    href="cotizacion">Solicitar Cotización</a>
-                </div>
-              </div>
-              <div class="w-auto lg:hidden">
-                <button
-                  x-on:click="mobileNavOpen = !mobileNavOpen"
-                  class="relative z-10 inline-block"
-                >
-                  <svg
-                    class="text-green-500"
-                    width="51"
-                    height="51"
-                    viewbox="0 0 56 56"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="56" height="56" rx="28" fill="currentColor"
-                    ></rect>
-                    <path
-                      d="M37 32H19M37 24H19"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}"
-        class="hidden fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50"
-      >
-        <div
-          x-on:click="mobileNavOpen = !mobileNavOpen"
-          class="fixed inset-0 bg-black opacity-60"
-        >
-        </div>
-        <nav class="relative z-10 px-9 pt-8 h-full bg-black overflow-y-auto">
-          <div class="flex flex-wrap justify-between ">
-            <div class="w-full">
-              <div class="flex items-center justify-between -m-2">
-                <div class="w-auto p-2">
-                  <a class="inline-block" href="#">
-                    <img
-                      src="/images/logos/logo-6c3816e45735f4f9bc9856a5b3cbfec7.png"
-                      alt="SR Boots GDL"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-center mt-16">
-              <ul>
-                <li
-                  class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"
-                >
-                  <a href="index.html">Inicio</a>
-                </li>
-                <li
-                  class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"
-                >
-                  <a href="productos">Productos</a>
-                </li>
-                <li
-                  class="mb-8 text-white font-medium hover:text-opacity-90 tracking-tighter"
-                >
-                  <a href="nosotros">Nosotros</a>
-                </li>
-                <li
-                  class="text-white font-medium hover:text-opacity-90 tracking-tighter"
-                >
-                  <a href="contacto">Contacto</a>
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col justify-end w-full pb-8 mt-10">
-              <a
-                class="inline-block px-8 py-4 text-center text-white hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300"
-                href="/index.html">Solicitar Cotización</a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </section>
-    <section>
-      <div class="relative pt-56 pb-24 lg:pb-40 md:pt-20">
-        <div class="relative z-10 container px-4 mx-auto">
-          <div class="flex flex-wrap items-center -m-8">
-            <div class="relative z-10 w-full md:w-1/2 lg:w-7/12 p-8">
-              <div class="md:max-w-xl">
-                <span
-                  class="inline-block mb-2.5 text-sm text-green-400 font-medium tracking-tighter"
-                  >Calzado Industrial de Calidad</span
-                >
-                <h1
-                  class="font-heading mb-8 text-7xl lg:text-8xl xl:text-10xl text-black tracking-tighter"
-                >
-                  Calzado de seguridad fabricado en México con estándares
-                  internacionales.
-                </h1>
-                <p class="mb-10 text-lg text-black md:max-w-md">
-                  Todos nuestros modelos cuentan con garantía de 60 días y
-                  certificación NOM-113-STPS-2009.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                  <a
-                    class="inline-block px-8 py-4 tracking-tighter bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300"
-                    href="#">Ver Catálogo</a
-                  >
-                  <a
-                    class="inline-block px-8 py-4 text-black hover:text-black tracking-tighter hover:bg-green-400 border-2 border-white focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40 rounded-full transition duration-300"
-                    href="#">Contactar</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="md:w-1/2 lg:w-5/12 p-8">
-              <div class="relative max-w-max mx-auto md:mr-0">
-                <img
-                  class="rounded-3xl"
-                  src="/images/botas-sr-boots-png-1761157576524.webp"
-                  alt="Botas industriales SR Boots GDL"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        class="absolute top-0 left-0"
-        src="/nightsable-assets/images/headers/layer-blur.svg"
-        alt=""
-      />
-    </section>
-    <section class="relative overflow-hidden mt-8">
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap items-center -m-8">
-          <div class="w-full md:w-1/2 ps-8 pt-8 order-1">
-            <span
-              class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter"
-              >Protección que impulsa el trabajo de México.</span
-            >
-            <h2
-              class="font-heading mb-6 text-6xl md:text-7xl text-black tracking-tighter-xl"
-            >
-              seguridad industrial integral
-            </h2>
-          </div>
-          <div class="w-full md:w-1/2 ps-8 order-3 -mt-24 md:mt-0">
-            <div class="relative mx-auto w-80 md:z-10 md:max-w-md">
-              <p class="mb-8 text-black text-opacity-60">
-                Fabricamos calzado industrial certificado NOM-113-STPS-2009 y
-                brindamos consultoría en seguridad e higiene laboral. Productos
-                ergonómicos, dieléctricos y resistentes. Envíos a toda la
-                República Mexicana.
-              </p>
-              <ul>
-                <li class="inline-flex mb-3.5">
-                  <img
-                    class="mr-3.5"
-                    src="/nightsable-assets/images/features/checked.svg"
-                    alt=""
-                  />
-                  <span class="text-black"
-                    >Diseñado para resistir. Certificado para proteger.</span
-                  >
-                </li>
-                <li class="inline-flex mb-3.5">
-                  <img
-                    class="mr-3.5"
-                    src="/nightsable-assets/images/features/checked.svg"
-                    alt=""
-                  />
-                  <span class="text-black"
-                    >Tecnología ergonómica para entornos de alto riesgo.</span
-                  >
-                </li>
-                <li class="inline-flex">
-                  <img
-                    class="mr-3.5"
-                    src="/nightsable-assets/images/features/checked.svg"
-                    alt=""
-                  />
-                  <span class="text-black"
-                    >Seguridad industrial con ingeniería mexicana.</span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 ps-8 order-2 z-20 md:z-0 mt-20">
-            <img
-              class="relative md:absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-              src="/images/Diseno-sin-titulo-1.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div>
-        <img
-          class="mx-auto"
-          src="/images/GDL-BOOTS-SR-TRANSPARENTE.png"
-          alt=""
-        />
-      </div>
-    </section>
-    <section class="pb-24 bg-blueGray-950">
-      <div class="container px-4 mx-auto">
-        <div class="text-center">
-          <h2
-            class="font-heading mb-6 text-7xl lg:text-8xl text-black tracking-8xl md:max-w-md mx-auto"
+<Layout>
+
+  <section class="relative overflow-hidden mt-56">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap items-center -m-8">
+        <div class="w-full md:w-1/2 ps-8 pt-8 order-1">
+          <span
+            class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter"
+            >Protección que impulsa el trabajo de México.</span
           >
-            Protección que trabaja contigo
+          <h2
+            class="font-heading mb-6 text-6xl md:text-7xl text-black tracking-tighter-xl"
+          >
+            seguridad industrial integral
           </h2>
-          <p class="mb-20 text-black text-opacity-60 md:max-w-md mx-auto">
-            SR Boots GDL ofrece soluciones integrales en seguridad industrial:
-            calzado ergonómico certificado, consultoría, capacitación y equipo
-            profesional. Enuestra misión: proteger a quienes hacen que México
-            avance.
-          </p>
-          <div class="flex flex-wrap -m-4">
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div
-                class="relative pt-16 px-10 pb-52 h-full bg-gradient-radial-dark border border-gray-800 border-opacity-30 rounded-5xl"
-              >
-                <div class="relative z-10">
-                  <img
-                    class="mb-8 mx-auto"
-                    src="/nightsable-assets/images/cards/card-image1.png"
-                    alt=""
-                  />
-                  <h3 class="mb-6 text-3xl text-black tracking-3xl">
-                    Consultoría de Seguridad industrial
-                  </h3>
-                  <p class="text-black text-opacity-60">
-                    SR Boots GDL cuenta con una división especializada en
-                    consultoría y capacitación industrial, orientada a empresas
-                    que buscan cumplimiento normativo y prevención efectiva de
-                    riesgos. Desarrollamos Programas Internos de Protección
-                    Civil, Planes de Emergencia, Dictámenes de Obra, Análisis de
-                    Riesgos, y capacitaciones alineadas a las NOM-STPS vigentes.
-                    Solicita un diagnóstico empresarial gratuito
-                  </p>
-                </div>
+        </div>
+        <div class="w-full md:w-1/2 ps-8 order-3 -mt-24 md:mt-0">
+          <div class="relative mx-auto w-80 md:z-10 md:max-w-md">
+            <p class="mb-8 text-black text-opacity-60">
+              Fabricamos calzado industrial certificado NOM-113-STPS-2009 y
+              brindamos consultoría en seguridad e higiene laboral. Productos
+              ergonómicos, dieléctricos y resistentes. Envíos a toda la
+              República Mexicana.
+            </p>
+            <ul>
+              <li class="inline-flex mb-3.5">
                 <img
-                  class="absolute right-0 bottom-0"
-                  src="/nightsable-assets/images/cards/card-blur.svg"
+                  class="mr-3.5"
+                  src="/nightsable-assets/images/features/checked.svg"
                   alt=""
                 />
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div
-                class="relative pt-16 px-10 pb-52 h-full bg-gradient-radial-dark border border-gray-800 border-opacity-30 rounded-5xl"
-              >
-                <div class="relative z-10">
-                  <img
-                    class="mb-8 mx-auto"
-                    src="/nightsable-assets/images/cards/card-image2.png"
-                    alt=""
-                  />
-                  <h3 class="mb-6 text-3xl text-black tracking-3xl">
-                    Capacitación STPS
-                  </h3>
-                  <p class="text-black text-opacity-60">
-                    Ofrecemos programas de capacitación y adiestramiento
-                    avalados por la STPS, diseñados para fortalecer la cultura
-                    de prevención dentro de tu empresa. Nuestros instructores
-                    capacitan en temas como: Prevención de accidentes y primeros
-                    auxilios. Prevención y combate de incendios. Trabajo en
-                    alturas y espacios confinados. Manejo seguro de materiales
-                    peligrosos. Comisiones de seguridad e higiene.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-              <div
-                class="relative pt-16 px-10 pb-52 h-full bg-gradient-radial-dark border border-gray-800 border-opacity-30 rounded-5xl"
-              >
-                <div class="relative z-10">
-                  <img
-                    class="mb-8 mx-auto"
-                    src="/nightsable-assets/images/cards/card-image3.png"
-                    alt=""
-                  />
-                  <h3 class="mb-6 text-3xl text-black tracking-3xl">
-                    Calzado industrial diseñado para resistir
-                  </h3>
-                  <p class="text-black text-opacity-60">
-                    Nuestra línea de calzado de seguridad abarca desde modelos
-                    ultraligeros y ergonómicos hasta botas para trabajo pesado y
-                    químico, todos elaborados con piel vacuna de alta calidad,
-                    suela dieléctrica y costura reforzada. Ofrecemos modelos con
-                    casquillo de acero o poliamida, y versiones sin casco para
-                    actividades de menor riesgo.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="relative py-24 overflow-hidden">
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap -m-8">
-          <div class="w-full lg:w-1/2 p-8">
-            <img
-              class="rounded-3xl"
-              src="/images/Gemini-Generated-Image-ag7wggag7wggag7w.png"
-              alt="Calzado industrial de calidad"
-            />
-          </div>
-          <div class="w-full lg:w-1/2 p-8">
-            <div class="lg:max-w-md lg:ml-auto">
-              <span
-                class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter"
-                >Nuestros Productos</span
-              >
-              <h2
-                class="font-heading mb-6 text-7xl text-black tracking-tighter-xl"
-              >
-                Calzado industrial diseñado para resistir
-              </h2>
-              <p class="mb-10 text-black text-opacity-60">
-                Nuestra línea de calzado de seguridad abarca desde modelos
-                ultraligeros y ergonómicos hasta botas para trabajo pesado y
-                químico, todos elaborados con piel vacuna de alta calidad, suela
-                dieléctrica y costura reforzada. Ofrecemos modelos con casquillo
-                de acero o poliamida, y versiones sin casco para actividades de
-                menor riesgo.
-              </p>
-              <div class="flex flex-wrap -m-2 mb-10">
-                <div class="w-full p-2">
-                  <div class="flex flex-wrap -m-2">
-                    <div class="w-auto p-2">
-                      <svg
-                        class="text-green-400"
-                        width="24"
-                        height="24"
-                        viewbox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="flex-1 p-2">
-                      <h3 class="text-xl text-black font-medium mb-2">
-                        Línea Industrial
-                      </h3>
-                      <p class="text-black text-opacity-60">
-                        Botas y zapatos para trabajo pesado, soldadura y
-                        construcción.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full p-2">
-                  <div class="flex flex-wrap -m-2">
-                    <div class="w-auto p-2">
-                      <svg
-                        class="text-green-400"
-                        width="24"
-                        height="24"
-                        viewbox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="flex-1 p-2">
-                      <h3 class="text-xl text-black font-medium mb-2">
-                        Línea Química:
-                      </h3>
-                      <p class="text-black text-opacity-60">
-                        Calzado resistente a sustancias corrosivas y altas
-                        temperaturas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full p-2">
-                  <div class="flex flex-wrap -m-2">
-                    <div class="w-auto p-2">
-                      <svg
-                        class="text-green-400"
-                        width="24"
-                        height="24"
-                        viewbox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <div class="flex-1 p-2">
-                      <h3 class="text-xl text-black font-medium mb-2">
-                        Línea Ultraligera Shadow:
-                      </h3>
-                      <p class="text-black text-opacity-60">
-                        Protección ergonómica y confort prolongado.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                class="inline-block px-8 py-5 text-black font-medium rounded-full bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 transition duration-300"
-                href="#">Solicitar Información</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        src="/nightsable-assets/images/features/bg-blur.png"
-        alt=""
-      />
-    </section>
-    <section class="bg-gray-50 overflow-hidden">
-      <div class="py-14 bg-black rounded-b-7xl hidden"></div>
-      <div class="py-24">
-        <div class="container px-4 mx-auto">
-          <div class="flex flex-wrap justify-center -m-8 mb-28">
-            <div class="w-full md:w-1/2 lg:w-4/12 p-8">
-              <div class="md:max-w-xs">
+                <span class="text-black"
+                  >Diseñado para resistir. Certificado para proteger.</span
+                >
+              </li>
+              <li class="inline-flex mb-3.5">
                 <img
-                  class="mb-7"
-                  src="/images/GDL-BOOTS-SR-TRANSPARENTE.png"
-                  alt="SR Boots GDL"
+                  class="mr-3.5"
+                  src="/nightsable-assets/images/features/checked.svg"
+                  alt=""
                 />
-                <p class="text-gray-400 font-medium">
-                  Fabricante líder de calzado industrial en Guadalajara.
-                  Protección y calidad para profesionales.
+                <span class="text-black"
+                  >Tecnología ergonómica para entornos de alto riesgo.</span
+                >
+              </li>
+              <li class="inline-flex">
+                <img
+                  class="mr-3.5"
+                  src="/nightsable-assets/images/features/checked.svg"
+                  alt=""
+                />
+                <span class="text-black"
+                  >Seguridad industrial con ingeniería mexicana.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 ps-8 order-2 z-20 md:z-0 mt-20">
+          <img
+            class="relative md:absolute top-1/2 left-1/2 transform -translate-x-1/2 md:-translate-x-1/4 -translate-y-1/2 md:-translate-y-full  md:w-[50%]"
+            src="/images/Diseno-sin-titulo-1.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <img class="mx-auto" src="/images/GDL-BOOTS-SR-TRANSPARENTE.png" alt="" />
+    </div>
+  </section>
+  <section class="pb-24 bg-blueGray-950">
+    <div class="container px-4 mx-auto">
+      <div class="text-center">
+        <h2
+          class="font-heading mb-6 text-7xl lg:text-8xl text-black tracking-8xl md:max-w-md mx-auto"
+        >
+          Protección que trabaja contigo
+        </h2>
+        <p class="mb-20 text-black text-opacity-60 md:max-w-md mx-auto">
+          SR Boots GDL ofrece soluciones integrales en seguridad industrial:
+          calzado ergonómico certificado, consultoría, capacitación y equipo
+          profesional. Enuestra misión: proteger a quienes hacen que México
+          avance.
+        </p>
+        <div class="flex flex-wrap -m-4">
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+            <div
+              class="relative pt-16 px-10 pb-52 h-full bg-gradient-radial-dark border border-gray-800 border-opacity-30 rounded-5xl"
+            >
+              <div class="relative z-10">
+                <img
+                  class="mb-8 mx-auto"
+                  src="/nightsable-assets/images/cards/card-image1.png"
+                  alt=""
+                />
+                <h3 class="mb-6 text-3xl text-black tracking-3xl">
+                  Consultoría de Seguridad industrial
+                </h3>
+                <p class="text-black text-opacity-60">
+                  SR Boots GDL cuenta con una división especializada en
+                  consultoría y capacitación industrial, orientada a empresas
+                  que buscan cumplimiento normativo y prevención efectiva de
+                  riesgos. Desarrollamos Programas Internos de Protección Civil,
+                  Planes de Emergencia, Dictámenes de Obra, Análisis de Riesgos,
+                  y capacitaciones alineadas a las NOM-STPS vigentes. Solicita
+                  un diagnóstico empresarial gratuito
+                </p>
+              </div>
+              <img
+                class="absolute right-0 bottom-0"
+                src="/nightsable-assets/images/cards/card-blur.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+            <div
+              class="relative pt-16 px-10 pb-52 h-full bg-gradient-radial-dark border border-gray-800 border-opacity-30 rounded-5xl"
+            >
+              <div class="relative z-10">
+                <img
+                  class="mb-8 mx-auto"
+                  src="/nightsable-assets/images/cards/card-image2.png"
+                  alt=""
+                />
+                <h3 class="mb-6 text-3xl text-black tracking-3xl">
+                  Capacitación STPS
+                </h3>
+                <p class="text-black text-opacity-60">
+                  Ofrecemos programas de capacitación y adiestramiento avalados
+                  por la STPS, diseñados para fortalecer la cultura de
+                  prevención dentro de tu empresa. Nuestros instructores
+                  capacitan en temas como: Prevención de accidentes y primeros
+                  auxilios. Prevención y combate de incendios. Trabajo en
+                  alturas y espacios confinados. Manejo seguro de materiales
+                  peligrosos. Comisiones de seguridad e higiene.
                 </p>
               </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-2/12 p-8">
-              <h3 class="mb-6 text-lg text-black font-medium">Productos</h3>
-              <ul>
-                <li class="mb-2.5">
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Botas Industriales</a
-                  >
-                </li>
-                <li class="mb-2.5">
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Botas Dieléctricas</a
-                  >
-                </li>
-                <li class="mb-2.5">
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Calzado Antiderrapante</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Accesorios</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-2/12 p-8">
-              <h3 class="mb-6 text-lg text-black font-medium">Empresa</h3>
-              <ul>
-                <li class="mb-2.5">
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Nosotros</a
-                  >
-                </li>
-                <li class="mb-2.5">
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Certificaciones</a
-                  >
-                </li>
-                <li class="mb-2.5">
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Distribuidores</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="inline-block text-lg font-medium text-gray-400 hover:text-black transition duration-300"
-                    href="#">Contacto</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="w-full md:w-1/2 lg:flex-1 p-8">
-              <div class="flex flex-wrap -m-2">
-                <div class="w-full p-2">
-                  <a class="block py-5 px-8 bg-black rounded-full" href="#">
-                    <div class="flex flex-wrap items-center -m-2">
-                      <div class="w-auto p-2">
-                        <svg
-                          class="text-gray-900"
-                          width="24"
-                          height="24"
-                          viewbox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3 8L10.8906 13.2604C11.5624 13.7083 12.4376 13.7083 13.1094 13.2604L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        </svg>
-                      </div>
-                      <div class="flex-1 p-2">
-                        <p class="text-white">contacto@srbootsgdl.com</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="w-full p-2">
-                  <a class="block py-5 px-8 bg-black rounded-full" href="#">
-                    <div class="flex flex-wrap items-center -m-2">
-                      <div class="w-auto p-2">
-                        <svg
-                          class="text-gray-900"
-                          width="24"
-                          height="24"
-                          viewbox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        </svg>
-                      </div>
-                      <div class="flex-1 p-2">
-                        <p class="text-white">+52 3333208478</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="w-full p-2">
-                  <a class="block py-5 px-8 bg-black rounded-full" href="#">
-                    <div class="flex flex-wrap items-center -m-2">
-                      <div class="w-auto p-2">
-                        <svg
-                          class="text-gray-900"
-                          width="24"
-                          height="24"
-                          viewbox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.657 16.657L13.414 20.9C12.6331 21.6809 11.3668 21.6809 10.586 20.9L6.343 16.657C3.21895 13.5329 3.21895 8.46699 6.343 5.34297C9.46702 2.21895 14.5329 2.21895 17.657 5.34297C20.781 8.46699 20.781 13.5329 17.657 16.657Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                          <path
-                            d="M15 11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11Z"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        </svg>
-                      </div>
-                      <div class="flex-1 p-2">
-                        <p class="text-white">Guadalajara, Jalisco, México</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
-          <div class="flex flex-wrap justify-between -m-2">
-            <div class="w-auto p-2">
-              <p
-                class="inline-block text-sm font-medium text-black text-opacity-60"
-              >
-                © 2025 SR Boots GDL. Todos los derechos reservados.
-              </p>
-            </div>
-            <div class="w-auto p-2">
-              <div class="flex flex-wrap items-center -m-2 sm:-m-7">
-                <div class="w-auto p-2 sm:p-7">
-                  <a
-                    class="inline-block text-sm text-black text-opacity-60 hover:text-opacity-100 font-medium transition duration-300"
-                    href="#">Términos y Condiciones</a
-                  >
-                </div>
-                <div class="w-auto p-2 sm:p-7">
-                  <a
-                    class="inline-block text-sm text-black text-opacity-60 hover:text-opacity-100 font-medium transition duration-300"
-                    href="#">Política de Privacidad</a
-                  >
-                </div>
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+            <div
+              class="relative pt-16 px-10 pb-52 h-full bg-gradient-radial-dark border border-gray-800 border-opacity-30 rounded-5xl"
+            >
+              <div class="relative z-10">
+                <img
+                  class="mb-8 mx-auto"
+                  src="/nightsable-assets/images/cards/card-image3.png"
+                  alt=""
+                />
+                <h3 class="mb-6 text-3xl text-black tracking-3xl">
+                  Calzado industrial diseñado para resistir
+                </h3>
+                <p class="text-black text-opacity-60">
+                  Nuestra línea de calzado de seguridad abarca desde modelos
+                  ultraligeros y ergonómicos hasta botas para trabajo pesado y
+                  químico, todos elaborados con piel vacuna de alta calidad,
+                  suela dieléctrica y costura reforzada. Ofrecemos modelos con
+                  casquillo de acero o poliamida, y versiones sin casco para
+                  actividades de menor riesgo.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </body>
-</html>
+    </div>
+  </section>
+  <section class="relative py-24 overflow-hidden">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -m-8">
+        <div class="w-full lg:w-1/2 p-8">
+          <img
+            class="rounded-3xl"
+            src="/images/Gemini-Generated-Image-ag7wggag7wggag7w.png"
+            alt="Calzado industrial de calidad"
+          />
+        </div>
+        <div class="w-full lg:w-1/2 p-8">
+          <div class="lg:max-w-md lg:ml-auto">
+            <span
+              class="inline-block mb-4 text-sm text-green-400 font-medium tracking-tighter"
+              >Nuestros Productos</span
+            >
+            <h2
+              class="font-heading mb-6 text-7xl text-black tracking-tighter-xl"
+            >
+              Calzado industrial diseñado para resistir
+            </h2>
+            <p class="mb-10 text-black text-opacity-60">
+              Nuestra línea de calzado de seguridad abarca desde modelos
+              ultraligeros y ergonómicos hasta botas para trabajo pesado y
+              químico, todos elaborados con piel vacuna de alta calidad, suela
+              dieléctrica y costura reforzada. Ofrecemos modelos con casquillo
+              de acero o poliamida, y versiones sin casco para actividades de
+              menor riesgo.
+            </p>
+            <div class="flex flex-wrap -m-2 mb-10">
+              <div class="w-full p-2">
+                <div class="flex flex-wrap -m-2">
+                  <div class="w-auto p-2">
+                    <svg
+                      class="text-green-400"
+                      width="24"
+                      height="24"
+                      viewbox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 p-2">
+                    <h3 class="text-xl text-black font-medium mb-2">
+                      Línea Industrial
+                    </h3>
+                    <p class="text-black text-opacity-60">
+                      Botas y zapatos para trabajo pesado, soldadura y
+                      construcción.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <div class="flex flex-wrap -m-2">
+                  <div class="w-auto p-2">
+                    <svg
+                      class="text-green-400"
+                      width="24"
+                      height="24"
+                      viewbox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 p-2">
+                    <h3 class="text-xl text-black font-medium mb-2">
+                      Línea Química:
+                    </h3>
+                    <p class="text-black text-opacity-60">
+                      Calzado resistente a sustancias corrosivas y altas
+                      temperaturas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <div class="flex flex-wrap -m-2">
+                  <div class="w-auto p-2">
+                    <svg
+                      class="text-green-400"
+                      width="24"
+                      height="24"
+                      viewbox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 p-2">
+                    <h3 class="text-xl text-black font-medium mb-2">
+                      Línea Ultraligera Shadow:
+                    </h3>
+                    <p class="text-black text-opacity-60">
+                      Protección ergonómica y confort prolongado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="inline-block px-8 py-5 text-black font-medium rounded-full bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 transition duration-300"
+              href="contacto">Solicitar Información</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      src="/nightsable-assets/images/features/bg-blur.png"
+      alt=""
+    />
+  </section>
+</Layout>
