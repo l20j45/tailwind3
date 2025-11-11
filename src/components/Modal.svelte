@@ -53,10 +53,10 @@
 
             <div class="p-8">
                 <!-- Imagen -->
-                <div class="mb-6 relative overflow-hidden bg-gray-900 bg-opacity-30 rounded-2xl">
+                <div class="mb-6 relative overflow-hidden bg-white bg-opacity-30 rounded-2xl">
                     <img 
                         class="w-full h-96 object-cover" 
-                        src="/images/Mod-2048-musgo.jpg" 
+                        src="/images/botas/{boot.imagen}" 
                         alt="Bota de Seguridad Industrial {boot.Modelo}"
                     >
                     {#if boot?.new === "yes"}

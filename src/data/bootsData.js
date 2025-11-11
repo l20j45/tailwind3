@@ -1,6 +1,7 @@
     export const bootsData = [
     {
         Modelo: "2048",
+        imagen:"Mod._2048_negro.png",
         Descripcion_General: "Calzado industrial con casquillo de poliamida, ideal para trabajos en almacen con pesos hasta de 450 kg, trabajos de repartidor, supervisor, carpinteria, trabajadores del campo, gasolineras, manufactureras, metal mecanica areas que no sean hornos, (no recomendado para soldadura, ni manejo de abrasivos)",
         features: ["Puntera de acero", "Suela antideslizante", "Resistente al agua"],
         Beneficios: ["1.-Calzado ultraligero (300 g)", "2.- Fabricado con suela ergonómica ","3.- Comodo para altas horas de pie en el trabajo ","4.- Material textil que ayuda a la ventilación del pie"," 5.- Material 100% lavable ","6.- Diseño Novedoso en tres colores ","7.-Suela de caucho con latex resistente a manejo de quimicos, y temperaturas de 90 a 125 grados"],
@@ -21,6 +22,7 @@
     },
     {
         Modelo: "3058",
+        imagen:"modelo_3058.png",
         Descripcion_General: "Calzado industrial tipo tenis con casquillo de poliamida, ideal para trabajos en almacén con pesos hasta de 450 kg, trabajos de repartidor, supervisor, carpintería, trabajadores del campo, gasolineras, manufactureras, metal mecánica áreas que no sean hornos, (no recomendado para soldadura, ni manejo de abrasivos)",
         Beneficios: ["1.- Calzado ultraligero (300 g)"," 2.- Fabricado con suela ergonómica"," 3.- Cómodo para altas horas de pie en el trabajo"," 4.- Material textil que ayuda a la ventilación del pie"," 5.- Material 100% lavable"," 6.- Diseño Novedoso en tres colores"],
         Colores: "Musgo, café, camel, negro, oxford",
@@ -39,6 +41,7 @@
     },
     {
         Modelo: "SHADOW 3066",
+        imagen:"shadow_3066.png",
         Descripcion_General: "Calzado industrial tipo tennis, SIN CASQUILLO, ideal para trabajos en el campo, areas de manufactura ligera, supervision, almacen carga ligera, trabajos por varias horas de pie, senderismo, caminatas.",
         Beneficios: ["1.-Calzado ultraligero (300 g) sin casco"," 2.- Fabricado con suela ergonómica"," 3.- Cómodo para altas horas de pie en el trabajo"," 4.- Material textil que ayuda a la ventilación del pie"," 5.- Material 100% lavable"," 6.- Diseño Novedoso en tres colores"],
         Colores: "musgo, café, camel, negro, oxford",
@@ -57,6 +60,7 @@
     },
     {
         Modelo: "SHADOW 515",
+        imagen:"Shadow_515.png",
         Descripcion_General: "Calzado industrial dieléctrico, el cual protege de los impactos ante caídas de objetos pesados y además de la protección eléctrica ante descargas ocasionadas por manipulación de cables o elementos en general de conductores de la electricidad, ideal para trabajos de electricidad, trabajos pesados con trabajos con manejos de abrasivos.",
         Beneficios: ["1.- Calzado ultraligero (300 g) Dieléctrico y protección de químicos"," 2.- Fabricado con suela ergonómica, antifatiga y antimicótica."," 3.- Cómodo para altas horas de pie en el trabajo"," 4.- Material flor entera de cuero de ganado vacuno"," 5.- Material 100% lavable ","6.- Suela antiderrapante de hule compuesto,  resistente a manejo de químicos, y temperaturas de 90 a 125 grados"],
         Colores: "negro",
@@ -75,6 +79,7 @@
     },
     {
         Modelo: "SHADOW 510",
+        imagen:"shadow_510.png",
         Descripcion_General: "Calzado industrial dielectrico además de la protección química son un tipo de calzado diseñado específicamente para proteger los pies de sustancias químicas peligrosas, derrames, salpicaduras y otros riesgos químicos en entornos industriales o de laboratorio. ",
         Beneficios: ["1.- Calzado ultraligero (300 g) Dielectrico y proteccion de quimicos ","2.- Fabricado con suela ergonómica, antifatiga y antimicota."," 3.- Cómodo para altas horas de pie en el trabajo ","4.- Material flor entera de cuero de ganado vacuno ","5.- Material 100% lavable ","6.- Resistente a quimicos abrasivos, acidos, detergentes y desengrasantes ","7.- Suela antiderrapante de hule compuesto, resistente a manejo de quimicos, y temperaturas de 90 a 125 grados"],
         Colores: "negro",
@@ -93,6 +98,7 @@
     },
     {
         Modelo: "4000 MIEL",
+        imagen:"4000_miel.png",
         Descripcion_General: "Calzado industrial con casquillo de acero, ideal para trabajos industriales tales como minería, metal mecánica, agroindustrias, manufactureras, automotrices, corte y soldadura, manejo de químicos, construcción, mantenimiento y otros",
         Beneficios: ["1.-Calzado industrial con flexibilidad para cambio de suela ","2.- Fabricado con suela ergonómica","3.- Comodo para altas horas de pie en el trabajo ","4.- Material piel vacuna que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en varios colores"],
         Colores: "miel, café, chedrón, negro, musgo",
@@ -111,6 +117,7 @@
     },
     {
         Modelo: "5000 MIEL",
+        imagen:"5000.png",
         Descripcion_General: "Calzado industrial con casquillo de acero o poliamida, Modelo economico,  ideal para todo tipo de trabajo industrial,  tales como manufactura, almacen, construccion, reparto, metal mecánica, agroindustrias, automotrices, (Lodos, agua, polvo, tierra)",
         Beneficios: ["1.-Calzado industrial línea económica ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material piel vacuno que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en varios colores"],
         Colores: "café, negro",
@@ -129,6 +136,7 @@
     },
     {
         Modelo: "6000 MIEL",
+        imagen:"6000_miel.png",
         Descripcion_General: "Calzado industrial con casquillo de acero o poliamida, ideal para trabajos industriales tales como minería, metal mecánica, agroindustrias, manufactureras, automotrices, corte y soldadura, manejo de químicos, construcción, mantenimiento y otros",
         Beneficios: ["1.-Calzado industrial con flexibilidad para cambio de suela ","2.- Fabricado con suela ergonómica ","3.- Comodo para altas horas de pie en el trabajo ","4.- Material piel que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en varios colores"],
         Colores: "miel, café, chedrón, negro, musgo",
@@ -147,6 +155,7 @@
     },
     {
         Modelo: "8000",
+        imagen:"8000.png",
         Descripcion_General: "Calzado industrial con casquillo de acero o poliamida, ideal para trabajos en el que el colaborar se encuentra muchas horas de pie, ideal para labores de manufactura, construccion, gasolineras, industria alimenticia, mantenimientos, metal mecanica.",
         Beneficios: ["1.-Calzado industrial con flexibilidad línea ergonómica ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material piel que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en varios colores"],
         Colores: "miel, café, chedrón, negro, musgo",
@@ -165,6 +174,7 @@
     },
     {
         Modelo: "11000",
+        imagen:"11000.png",
         Descripcion_General: "Calzado linea tactica,  con casquillo de acero o poliamida, ideal para trabajos de seguridad, guardias intramuros o extramuros, suela ergonomica doble forro, ideal para muchas horas de pie, supervision, manufactura, reparto, almacen, industria electronica.",
         Beneficios: ["1.- Calzado línea ergonómica, alta comodidad ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material piel que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en varios colores"],
         Colores: "café, negro",
@@ -183,6 +193,7 @@
     },
     {
         Modelo: "9000",
+        imagen:"9000.png",
         Descripcion_General: "Calzado industrial, ideal para trabajos con manejo de químicos, abrasivos y procesos de soldadura, suela con doble resistencia (Temperaturas de - 12 grados hasta 255 grados)",
         Beneficios: ["1.- Calzado industrial con flexibilidad a cambio de suela ","2.- Fabricado con suela ergonómica ","3.- Suela especial para trabajos con químicos, abrasivos y altas temperaturas ","4.- Material 100 % piel que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en varios colores"],
         Colores: "miel, café, chedrón, negro",
@@ -201,6 +212,7 @@
     },
     {
         Modelo: "2500",
+        imagen:"2500.png",
         Descripcion_General: "Zapato ultraligero, diseños modernos, peso por zapato (300 gramos), ideal para trabajos en los que se esta demasiado tiempo de pie, caminata de largas distancias, trabajo en el campo, lodo, tierra y polvo.",
         Beneficios: ["1.- Calzado ultraligero (300 g) ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material textil que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en tres colores"],
         Colores: "miel, café, avellana, cobre",
@@ -219,6 +231,7 @@
     },
     {
         Modelo: "2600",
+        imagen:"2600.png",
         Descripcion_General: "Zapato ultraligero, diseños modernos, peso por zapato (300 gramos), ideal para trabajos en los que se esta demasiado tiempo de pie, caminata de largas distancias, trabajo en el campo, lodo, tierra y polvo.",
         Beneficios: ["1.- Calzado ultraligero (300 g) ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material textil que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en tres colores"],
         Colores: "miel, café, avellana, cobre",
@@ -237,6 +250,7 @@
     },
     {
         Modelo: "2700",
+        imagen:"2700.png",
         Descripcion_General: "Zapato ultraligero, diseños modernos, peso por zapato (300 gramos), ideal para trabajos en los que se esta demasiado tiempo de pie, caminata de largas distancias, trabajo en el campo, lodo, tierra y polvo.",
         Beneficios: ["1.- Calzado ultraligero (300 g) ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material textil que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en tres colores"],
         Colores: "miel, café, avellana, cobre",
@@ -255,6 +269,7 @@
     },
     {
         Modelo: "2800",
+        imagen:"2800.png",
         Descripcion_General: "Zapato ultraligero, diseños modernos, peso por zapato (300 gramos), ideal para trabajos en los que se esta demasiado tiempo de pie, caminata de largas distancias, trabajo en el campo, lodo, tierra y polvo.",
         Beneficios: ["1.- Calzado ultraligero (300 g) ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material textil que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en tres colores"],
         Colores: "miel, café, avellana, cobre",
@@ -273,6 +288,7 @@
     },
     {
         Modelo: "120",
+        imagen:"120.png",
         Descripcion_General: "Tenis de seguridad, que además de ser funcionales cuentan con la comodidad y ergonomía necesaria para el día a día, brindando buenos diseños que cumplen con los requisitos de seguridad en el trabajo.",
         Beneficios: ["1.- Calzado ultraligero (250 g) ","2.- Fabricado con suela ergonómica ","3.- Cómodo para altas horas de pie en el trabajo ","4.- Material textil que ayuda a la ventilación del pie ","5.- Material 100% lavable ","6.- Diseño Novedoso en tres colores"],
         Colores: "verde, azul, negro",

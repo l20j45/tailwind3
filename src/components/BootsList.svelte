@@ -141,10 +141,10 @@ let searchTerm = "";
     <div
       class="group border border-gray-900 hover:border-white rounded-3xl overflow-hidden transition duration-300"
     >
-      <div class="relative overflow-hidden bg-gray-900 bg-opacity-30">
+      <div class="relative overflow-hidden bg-white bg-opacity-30">
         <img
           class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
-          src="/images/Mod-2048-musgo.jpg"
+          src="/images/botas/{boot.imagen}"
           alt="Bota de Seguridad Industrial"
         />
         <div class="absolute top-4 right-4">
