@@ -2,9 +2,10 @@
   import { bootsData } from "../data/bootsData.js";
   import Modal from "./Modal.svelte";
   import { onMount } from "svelte";
+  import ColorBanners from "./colorBanners.svelte";
 
   let parametroBuscado = "Cargando...";
-let searchTerm = "";
+  let searchTerm = "";
 
   onMount(() => {
     const queryString = window.location.search;
@@ -19,7 +20,6 @@ let searchTerm = "";
     }
   });
 
-  
   let selectedCategory = "";
   let selectedFeatures = [];
   let showAll = false;
@@ -129,7 +129,7 @@ let searchTerm = "";
           checked={selectedFeatures.includes(feature)}
           on:change={() => toggleFeature(feature)}
         />
-        <label class="text-black text-sm">{feature}</label>
+        <span class="text-black text-sm">{feature}</span>
       </div>
     {/each}
   </div>
@@ -163,6 +163,9 @@ let searchTerm = "";
         <p class="mb-4 text-black text-opacity-60 text-sm">
           {boot.Descripcion_General}
         </p>
+        <div class="mb-5 ms-5">
+          <ColorBanners colors={boot.Colores} />
+        </div>
         <div class="mb-4 space-y-2">
           {#each boot.Beneficios.slice(0, 3) as b}
             <div class="flex items-center text-black text-opacity-60 text-sm">
@@ -181,6 +184,7 @@ let searchTerm = "";
               <span>{b}</span>
             </div>
           {/each}
+
           {#if boot.Beneficios.length > 3}
             <p class="text-sm text-gray-500">
               + {boot.Beneficios.length - 3} beneficios más

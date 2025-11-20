@@ -23,23 +23,13 @@ const { boot, index } = Astro.props;
       {
         boot.Beneficios.slice(0, 3).map((feature:any) => (
           <div class="flex items-center text-black text-opacity-60 text-sm">
-            <svg
-              class="mr-2 text-green-400"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.66667 10.6667L4 8.00004L3.06 8.94004L6.66667 12.5467L14 5.21337L13.06 4.27337L6.66667 10.6667Z"
-                fill="currentColor"
-              />
-            </svg>
+
             <span>{feature}</span>
           </div>
         ))
       }
+      p
+      <span> colores {boot.colores}</span>
       {
         boot.Beneficios.length > 3 ? (
           <p class="text-sm text-gray-500 italic">
