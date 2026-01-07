@@ -1,6 +1,6 @@
 <script>
-  import { bootsData } from "../data/bootsData.js";
-  import Modal from "./Modal.svelte";
+  import { bootsData } from "../../data/bootsData.js";
+  import ModalBoots from "./ModalBoots.svelte";
   import { onMount } from "svelte";
   import ColorBanners from "./colorBanners.svelte";
 
@@ -250,4 +250,4 @@
 {/if}
 
 <!-- Modal -->
-<Modal isOpen={isModalOpen} boot={selectedBoot} onClose={closeModal} />
+<ModalBoots isOpen={isModalOpen} boot={selectedBoot} onClose={closeModal} />
