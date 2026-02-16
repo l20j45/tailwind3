@@ -1,124 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Formulario from "../components/Form/Formulario.svelte";
+const GOOGLE_SCRIPT_URL = import.meta.env.PUBLIC_GOOGLE_SCRIPT_URL;
 ---
 
 <Layout>
-  
-    <section class="mt-52  py-20 overflow-hidden">
-      <div class="container px-4 mx-auto">
-        <div class="flex flex-wrap -m-8">
-          <div class="w-full md:w-1/2 p-8">
-            <div class="md:max-w-md">
-              
-              <h2
-                class="font-heading mb-8 text-7xl lg:text-8xl text-green-400 tracking-7xl lg:tracking-8xl"
-              >
-                la seguridad es primero
-              </h2>
-              <p class="mb-8 text-gray-300">
-                Completa el formulario y nuestro equipo te ayudará a elegir el
-                calzado ideal para tu empresa. Tu seguridad comienza con un buen
-                paso.
-              </p>
-              <a
-                class="mb-6 inline-block text-xl text-green-400 font-medium"
-                href="mailto:someone@example.com">contacto@gdlbootsr.com</a
-              >
-              <p class="text-xl text-green-400 font-medium">
-                +52 33 3156 0210 
-              </p>
-              <p class="text-xl text-green-400 font-medium">Atendemos en todo México</p>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-8">
-            <div
-              class="relative px-9 py-10 bg-blueGray-900 bg-opacity-30 max-w-lg mx-auto rounded-5xl"
+  <section class="mt-52 py-20 overflow-hidden">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -m-8">
+        <div class="w-full md:w-1/2 p-8">
+          <div class="md:max-w-md">
+            <h2
+              class="font-heading mb-8 text-7xl lg:text-8xl text-green-400 tracking-7xl lg:tracking-8xl"
             >
-              <h3 class="mb-6 text-2xl font-medium text-white">
-                Déjanos tus datos
-              </h3>
-              <div
-                class="mb-4 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl"
-              >
-                <input
-                  class="pl-6 pr-16 py-4 text-white w-full placeholder-white outline-none bg-transparent"
-                  type="text"
-                  placeholder="Primer Nombre"
-                />
-              </div>
-              <div
-                class="mb-4 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl"
-              >
-                <input
-                  class="pl-6 pr-16 py-4 text-white w-full placeholder-white outline-none bg-transparent"
-                  type="text"
-                  placeholder="Apellido"
-                />
-              </div>
-              <div
-                class="mb-4 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl"
-              >
-                <input
-                  class="pl-6 pr-16 py-4 text-white w-full placeholder-white outline-none bg-transparent"
-                  type="text"
-                  placeholder="Correo"
-                />
-              </div>
-              <div
-                class="mb-4 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl"
-              >
-                <input
-                  class="pl-6 pr-16 py-4 text-white w-full placeholder-white outline-none bg-transparent"
-                  type="text"
-                  placeholder="Empresa"
-                />
-              </div>
-              <div
-                class="mb-4 border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl"
-              >
-                <div class="relative overflow-hidden rounded-3xl">
-                  <select
-                    class="appearance-none pl-6 pr-16 py-4 text-white w-full placeholder-white outline-none bg-transparent bg-gray-300"
-                    
-                  >
-                    <option hidden="">Como podemos ayudarte?</option>
-                    <option>Cotizacion</option>
-                    <option>Seguimiento</option>
-                    <option>Otro</option>
-                  </select>
-                  <svg
-                    class="absolute right-8 top-1/2 transform -translate-y-1/2"
-                    width="16"
-                    height="9"
-                    viewbox="0 0 16 9"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.6004 1.4585L9.16706 6.89183C8.52539 7.5335 7.47539 7.5335 6.83372 6.89183L1.40039 1.4585"
-                      stroke="white"
-                      stroke-width="1.66667"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </svg>
-                </div>
-              </div>
-              <textarea
-                class="mb-3 w-full px-6 py-4 text-white placeholder-white bg-transparent border border-gray-900 focus-within:border-white overflow-hidden rounded-3xl resize-none"
-                placeholder="Mensaje"
-                rows="9"></textarea>
-              <div class="flex flex-wrap justify-end">
-                <div class="w-auto">
-                  <a
-                    class="inline-block px-14 py-4 text-center font-medium tracking-2xl border-2 border-green-400 bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300"
-                    href="#">Mensaje</a>
-                </div>
-              </div>
-            </div>
+              la seguridad es primero
+            </h2>
+            <p class="mb-8 text-gray-300">
+              Completa el formulario y nuestro equipo te ayudará a elegir el
+              calzado ideal para tu empresa. Tu seguridad comienza con un buen
+              paso.
+            </p>
+            <a
+              class="mb-6 inline-block text-xl text-green-400 font-medium"
+              href="mailto:someone@example.com">contacto@gdlbootsr.com</a
+            >
+            <p class="text-xl text-green-400 font-medium">+52 33 3156 0210</p>
+            <p class="text-xl text-green-400 font-medium">
+              Atendemos en todo México
+            </p>
           </div>
         </div>
+        <Formulario scriptUrl={GOOGLE_SCRIPT_URL} client:load />
       </div>
-    </section>
-  
+    </div>
+  </section>
 </Layout>
